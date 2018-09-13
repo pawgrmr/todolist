@@ -1,11 +1,11 @@
 // check off todos by clicking
-$("li").click(function(){
+$("ul").on("click", "li", function(){
 	$(this).toggleClass("completed");
 });
 
 //click on X to delete todo
 
-$("span").click(function(event){
+$("span").on("click", "span", function(event){
 	$(this).parent().fadeOut(500, function(){//this=li because parent=li,
 		$(this).remove(); //removes entire li
 	});
@@ -18,6 +18,8 @@ $("input[type= 'text']").keypress(function(event){
 		var todoText = $(this).val(); //value on input i.e. typed text in textbox
 		$(this).val(""); //empty string to clear text box
 		//create a new li and to ul
-		$("ul").append("<li><span>X</span> " + todoText "</li>");
+		$("ul").append("<li><span>X</span> " + todoText + "</li>")
 	}
 });
+
+
