@@ -1,17 +1,13 @@
 // check off todos by clicking
-
-//select lis
 $("li").click(function(){
-	if($(this).css("color") === "rgb(128, 128, 128)"){
-		$(this).css({
-			color: "black",
-			textDecoration: "none" //need to use camel case in js
-		});
-	}
-	else {
-		$(this).css({
-			color: "gray",
-			textDecoration: "line-through" //need to use camel case in js
-		});
-	}
+	$(this).toggleClass("completed");
+});
+
+//click on X to delete todo
+
+$("span").click(function(event){
+	$(this).parent().fadeOut(500, function(){//this=li because parent=li,
+		$(this).remove(); //removes entire li
+	});
+	event.stopPropagation(); //stops event from bubbling up
 });

@@ -3,3 +3,8 @@
 	width: 360px;
 	margin: 0 auto; /*centre the list*/
 }
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
