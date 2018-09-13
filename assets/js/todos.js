@@ -18,7 +18,7 @@ $("input[type= 'text']").keypress(function(event){
 		var todoText = $(this).val(); //value on input i.e. typed text in textbox
 		$(this).val(""); //empty string to clear text box
 		//create a new li and to ul
-		$("ul").append("<li><span>X</span> " + todoText + "</li>")
+		$("ul").append("<li><span><i class='fa fa-minus' aria-hidden='true'></i></span> " + todoText + "</li>")
 	}
 });
 
