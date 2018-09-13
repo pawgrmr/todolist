@@ -11,3 +11,13 @@ $("span").click(function(event){
 	});
 	event.stopPropagation(); //stops event from bubbling up
 });
+
+$("input[type= 'text']").keypress(function(event){
+	if(event.which === 13){
+		//grab todo from input by saving text to a var
+		var todoText = $(this).val(); //value on input i.e. typed text in textbox
+		$(this).val(""); //empty string to clear text box
+		//create a new li and to ul
+		$("ul").append("<li><span>X</span> " + todoText "</li>");
+	}
+});
