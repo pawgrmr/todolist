@@ -19,7 +19,10 @@ $("input[type= 'text']").keypress(function(event){
 		$(this).val(""); //empty string to clear text box
 		//create a new li and to ul
 		$("ul").append("<li><span><i class='fa fa-minus' aria-hidden='true'></i></span> " + todoText + "</li>")
-	}
+	} //change quotes to single quotes to make sure they dont interfere
 });
 
 
+$(".fa-plus").click(function(){
+	$("input[type='text']").fadeToggle();
+});

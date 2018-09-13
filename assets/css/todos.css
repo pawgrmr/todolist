@@ -1,3 +1,11 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #ffe259;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 h1 {
 	background: #ffa751;
 /*	color: white;*/
@@ -7,8 +15,17 @@ h1 {
 	font-size: 24px;
 	font-weight: normal;
 }
-.fa-plus {
-	float: right;
+
+span {
+	background: red;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	transition: 0.2s;
+	opacity: 0;
+	display: inline-block;
 }
 
 ul {
@@ -32,17 +49,6 @@ li:hover span {
 	width: 40px;
 	opacity: 1.0;
 }
-span {
-	background: red;
-	height: 40px;
-	margin-right: 20px;
-	text-align: center;
-	color: white;
-	width: 0;
-	transition: 0.2s;
-	opacity: 0;
-	display: inline-block;
-}
 
 input{
 	font-size: 18px;
@@ -58,12 +64,9 @@ input:focus{
 	border: 1px solid;
 	outline: none;
 }
-body {
-	font-family: 'Montserrat', sans-serif;
-	background: #ffe259;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+.fa-plus {
+	float: right;
 }
 
 #container {
